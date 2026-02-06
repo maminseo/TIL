@@ -7,9 +7,9 @@ class student{
     public:
         string name;
         int height;
-        float weight;
+        double weight;
 
-        student(string name, int height, float weight) {
+        student(string name, int height, double weight) {
             this->height =height;
             this->weight =weight;
             this->name = name;
@@ -32,7 +32,7 @@ int main() {
     student students[n];
     string name;
     int height;
-    float weight;
+    double weight;
     
 
     for(int i=0;i<n;i++) {
@@ -43,14 +43,18 @@ int main() {
     sort(students,students+n,cmp1);
     cout << "name" << endl;
     for(int i=0;i<n;i++) {
-       cout <<  students[i].name << " "<< students[i].height << " " << students[i].weight  << endl;
+       cout <<  students[i].name << " "<< students[i].height << " " ;
+       printf("%.1f",students[i].weight);
+       cout << endl;
     }
 
     cout << endl;
     sort(students,students+n,cmp2);
     cout << "height" << endl;
     for(int i=0;i<n;i++) {
-       cout <<  students[i].name << " "<< students[i].height << " " << students[i].weight  << endl;
+       cout <<  students[i].name << " "<< students[i].height << " ";
+       printf("%.1f",students[i].weight);
+       cout << endl;
     }
     return 0;
 }
